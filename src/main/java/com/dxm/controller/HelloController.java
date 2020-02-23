@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
+	private String test="项目经理分支版";
 
 	@RequestMapping("/hello")
 	@ResponseBody
 	public String hello() {
 		return "Hello World";
 	}
-	//git test开发人员11111
+	//git test项目经理111
 
 	
 	@RequestMapping("/login.do")
