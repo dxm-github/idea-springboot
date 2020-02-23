@@ -1,0 +1,24 @@
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  mvc:
+    view:
+      #jsp页面引入
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+    hiddenmethod:
+      filter:
+        #开启put和delete请求
+        enabled: true
+  #mybatis配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/day1?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*Mapper.xml
+  type-aliases-package: com.dxm.entity
